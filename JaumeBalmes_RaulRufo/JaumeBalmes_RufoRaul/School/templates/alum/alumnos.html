@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Alumnos</title>
+</head>
+<body>
+  <h1>Esta es la pagina de los Alumnos</h1>
+    <h2>Nuestros Alumnos</h2>
+
+    <ul>
+        {% for alum in alums %}
+        <h3>{{alum}}</h3>
+        <li>Nombre: {{ alums }}</li>
+        <li>Apellido: {{ alums }}</li>
+        <li>Edad: {{ alums }}</li>
+        <br>
+        {% endfor %}
+    </ul>
+        <div>
+            <label>Nombre: </label> {{ alums }}
+        </div>
+</body>
+</html>
