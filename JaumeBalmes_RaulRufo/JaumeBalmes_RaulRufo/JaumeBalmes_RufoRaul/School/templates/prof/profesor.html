@@ -1,9 +1,0 @@
-{% extends 'index.html' %}
-{% block content %}
-    <ul>
-        <li>Nombre: {{ profes.name }}</a></li>
-        <li>Apellido: {{ profes.surname }}</li>
-        <li>Edad: {{ profes.age }}</li>
-    </ul>
-    <a href="{% url 'prof' %}">Go back</a>
-{% endblock %}
