@@ -10,5 +10,6 @@ urlpatterns = [
     path('user_form/', views.userForm, name='user_form'),
     path('usuariosRegistrados/', views.users, name='index_one'),
     path('updateUsers/<str:pk>/', views.update_users, name='update_user'),
+    path('deleteUsers/<str:pk>/', views.delete_users, name='delete_user'),
 
 ]

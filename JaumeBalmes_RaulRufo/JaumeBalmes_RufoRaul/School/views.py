@@ -120,7 +120,7 @@ def userForm(request):
 def users(request):
     usuarios = Person.objects.all()
     context = {'users':usuarios}
-    return  render(request, 'usuarios/users.html', context)
+    return  render(request, 'crud/users.html', context)
 
 def update_users(request, pk):
     person = Person.objects.get(id=pk)
@@ -133,3 +133,11 @@ def update_users(request, pk):
             return redirect('index_one')
     context = {'form': form}
     return render(request, 'formularios/form.html', context)
+
+def delete_users(request, pk):
+    person = Person.objects.get(id=pk)
+    if request.method == 'POST':
+        person.delete()
+        return redirect('index_one')
+    context = {'object':person}
+    return render(request, 'formularios/delete_object.html', context)

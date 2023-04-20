@@ -1,0 +1,14 @@
+{% extends 'index.html' %}
+{% block content %}
+    {% for user in users %}
+        <p>{{ user.first_name }}</p>
+        <p>{{ user.last_name }}</p>
+        <p>{{ user.age }}</p>
+        <p>{{ user.email }}</p>
+        <p>{{ user.tel }}</p>
+        <p>{{ user.sexo }}</p>
+        <button><a href="{% url 'update_user' user.id %}">Editar</a></button>
+        <button><a href="{% url 'delete_user' user.id %}">Delete</a></button>
+
+    {% endfor %}
+{% endblock %}
