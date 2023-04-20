@@ -121,3 +121,15 @@ def users(request):
     usuarios = Person.objects.all()
     context = {'users':usuarios}
     return  render(request, 'usuarios/users.html', context)
+
+def update_users(request, pk):
+    person = Person.objects.get(id=pk)
+    form = PersonaForm(instance=person)
+
+    if request.method == 'POST':
+        form = PersonaForm(request.POST, instance=person)
+        if form.is_valid():
+            form.save()
+            return redirect('index_one')
+    context = {'form': form}
+    return render(request, 'formularios/form.html', context)

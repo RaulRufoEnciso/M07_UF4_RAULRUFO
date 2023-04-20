@@ -7,5 +7,6 @@
         <p>{{ user.email }}</p>
         <p>{{ user.tel }}</p>
         <p>{{ user.sexo }}</p>
+        <button><a href="{% url 'update_user' user.id %}">Editar</a></button>
     {% endfor %}
 {% endblock %}

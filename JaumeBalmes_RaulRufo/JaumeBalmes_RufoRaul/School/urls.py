@@ -9,4 +9,6 @@ urlpatterns = [
     path('profesores/profesor/<str:pk>/', views.profesor, name='profesor'),
     path('user_form/', views.userForm, name='user_form'),
     path('usuariosRegistrados/', views.users, name='index_one'),
+    path('updateUsers/<str:pk>/', views.update_users, name='update_user'),
+
 ]
