@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="{% static 'styles/header.css' %}">
+</head>
+<body>
+    <h3 class="titulo">Escuela 1</h3>
+    <nav>
+      <ul>
+        <li><a href="{% url 'prof' %}">Profesores</a></li>
+        <li><a href="{% url 'alum' %}">Alumnos</a></li>
+        <li><a href="{% url 'index' %}">Home</a></li>
+      </ul>
+    </nav>
+</body>
+</html>
